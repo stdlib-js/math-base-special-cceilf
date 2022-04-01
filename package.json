@@ -1,0 +1,36 @@
+{
+  "name": "@stdlib/math-base-special-cceilf",
+  "version": "0.0.0",
+  "description": "Round a single-precision complex floating-point number toward positive infinity.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-cceilf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "math.ceil",
+    "ceil",
+    "cceil",
+    "round",
+    "integer",
+    "nearest",
+    "value",
+    "complex",
+    "cmplx",
+    "number"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}

@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cceilf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@deno/mod.js';
+import cceilf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@v0.1.0-deno/mod.js';
 ```
 
 #### cceilf( z )
@@ -77,7 +77,7 @@ var im = imag( v );
 ```javascript
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import cceilf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@deno/mod.js';
+import cceilf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@v0.1.0-deno/mod.js';
 
 var rand = uniform( -50.0, 50.0 );
 

@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2021 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,25 +16,35 @@
 * limitations under the License.
 */
 
-#ifndef STDLIB_MATH_BASE_SPECIAL_CCEILF_H
-#define STDLIB_MATH_BASE_SPECIAL_CCEILF_H
+// TypeScript Version: 4.1
 
-#include <complex.h>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-/*
-* If C++, prevent name mangling so that the compiler emits a binary file having undecorated names, thus mirroring the behavior of a C compiler.
-*/
-#ifdef __cplusplus
-extern "C" {
-#endif
+import { Complex64 } from '@stdlib/types/complex';
 
 /**
 * Rounds a single-precision complex floating-point number toward positive infinity.
+*
+* @param z - input value
+* @returns result
+*
+* @example
+* var Complex64 = require( `@stdlib/complex/float32` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
+*
+* var v = cceilf( new Complex64( -1.5, 2.5 ) );
+* // returns <Complex64>
+*
+* var re = real( v );
+* // returns -1.0
+*
+* var im = imag( v );
+* // returns 3.0
 */
-float complex stdlib_base_cceilf( const float complex z );
+declare function cceilf( z: Complex64 ): Complex64;
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif // !STDLIB_MATH_BASE_SPECIAL_CCEILF_H
+// EXPORTS //
+
+export = cceilf;

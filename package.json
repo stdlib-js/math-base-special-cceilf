@@ -44,7 +44,8 @@
     "@stdlib/complex-float32-real": "github:stdlib-js/complex-float32-real#main",
     "@stdlib/math-base-special-ceilf": "^0.2.1",
     "@stdlib/types": "^0.3.2",
-    "@stdlib/utils-library-manifest": "^0.2.1"
+    "@stdlib/utils-library-manifest": "^0.2.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.1"
   },
   "devDependencies": {
     "@stdlib/constants-float32-ninf": "^0.2.1",

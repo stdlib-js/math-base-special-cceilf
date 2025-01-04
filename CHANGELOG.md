@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-01)
+## Unreleased (2025-01-04)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`a3301a2`](https://github.com/stdlib-js/stdlib/commit/a3301a2bde94e8c07888a1db589d189e9ecfc347) - **docs:** update related packages sections [(#4517)](https://github.com/stdlib-js/stdlib/pull/4517) _(by stdlib-bot)_
 -   [`4817867`](https://github.com/stdlib-js/stdlib/commit/4817867dcbddffe1ead3f532e01fce352bd77808) - **chore:** move stdlib benchmarks into native sub-directories _(by Philipp Burckhardt)_
 -   [`9e689ff`](https://github.com/stdlib-js/stdlib/commit/9e689ffcb7c6223afc521f1e574b42f10921cf5e) - **chore:** fix indentation in manifest.json files _(by Philipp Burckhardt)_
 -   [`2777e4b`](https://github.com/stdlib-js/stdlib/commit/2777e4be161869d09406e3b17947d24c64b47af2) - **bench:** resolve lint errors in benchmarks _(by Athan Reines)_

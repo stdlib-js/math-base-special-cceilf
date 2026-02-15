@@ -69,17 +69,9 @@ Rounds each component of a single-precision complex floating-point number toward
 
 ```javascript
 var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var real = require( '@stdlib/complex-float32-real' );
-var imag = require( '@stdlib/complex-float32-imag' );
 
 var v = cceilf( new Complex64( -1.5, 2.5 ) );
-// returns <Complex64>
-
-var re = real( v );
-// returns -1.0
-
-var im = imag( v );
-// returns 3.0
+// returns <Complex64>[ -1.0, 3.0 ]
 ```
 
 </section>
@@ -275,8 +267,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-cceilf.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-cceilf
 
-[test-image]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-cceilf/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-cceilf?branch=main

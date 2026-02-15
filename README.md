@@ -35,43 +35,32 @@ limitations under the License.
 
 > Round each component of a single-precision complex floating-point number toward positive infinity.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-cceilf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-cceilf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-cceilf/tags). For example,
-
-```javascript
-cceilf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@v0.3.1-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var cceilf = require( 'path/to/vendor/umd/math-base-special-cceilf/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceilf@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.cceilf;
-})();
-</script>
+var cceilf = require( '@stdlib/math-base-special-cceilf' );
 ```
 
 #### cceilf( z )
@@ -80,17 +69,9 @@ Rounds each component of a single-precision complex floating-point number toward
 
 ```javascript
 var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var real = require( '@stdlib/complex-float32-real' );
-var imag = require( '@stdlib/complex-float32-imag' );
 
 var v = cceilf( new Complex64( -1.5, 2.5 ) );
-// returns <Complex64>
-
-var re = real( v );
-// returns -1.0
-
-var im = imag( v );
-// returns 3.0
+// returns <Complex64>[ -1.0, 3.0 ]
 ```
 
 </section>
@@ -103,13 +84,8 @@ var im = imag( v );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
 var Complex64 = require( '@stdlib/complex-float32-ctor' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
@@ -121,11 +97,6 @@ for ( i = 0; i < 100; i++ ) {
     z = new Complex64( rand(), rand() );
     console.log( 'cceilf(%s) = %s', z, cceilf( z ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -134,7 +105,114 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/cceilf.h"
+```
+
+#### stdlib_base_cceilf( z )
+
+Rounds each component of a single-precision complex floating-point number toward positive infinity.
+
+```c
+#include "stdlib/complex/float32/ctor.h"
+#include "stdlib/complex/float32/real.h"
+#include "stdlib/complex/float32/imag.h"
+
+stdlib_complex64_t z = stdlib_complex64( 2.5f, -1.5f );
+
+stdlib_complex64_t out = stdlib_base_cceilf( z );
+
+float re = stdlib_complex64_real( out );
+// returns 3.0f
+
+float im = stdlib_complex64_imag( out );
+// returns -1.0f
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] stdlib_complex64_t` input value.
+
+```c
+stdlib_complex64_t stdlib_base_cceilf( const stdlib_complex64_t z );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/cceilf.h"
+#include "stdlib/complex/float32/ctor.h"
+#include "stdlib/complex/float32/reim.h"
+#include <stdio.h>
+
+int main( void ) {
+    const stdlib_complex64_t x[] = {
+        stdlib_complex64( 3.14f, 1.5f ),
+        stdlib_complex64( -3.14f, -1.5f ),
+        stdlib_complex64( 0.0f, 0.0f ),
+        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
+    };
+
+    stdlib_complex64_t v;
+    stdlib_complex64_t y;
+    float re1;
+    float im1;
+    float re2;
+    float im2;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        y = stdlib_base_cceilf( v );
+        stdlib_complex64_reim( v, &re1, &im1 );
+        stdlib_complex64_reim( y, &re2, &im2 );
+        printf( "cceilf(%f + %fi) = %f + %fi\n", re1, im1, re2, im2 );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -189,8 +267,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-cceilf.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-cceilf
 
-[test-image]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/math-base-special-cceilf/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-cceilf/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-cceilf?branch=main
@@ -224,7 +302,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cceil]: https://github.com/stdlib-js/math-base-special-cceil/tree/umd
+[@stdlib/math/base/special/cceil]: https://github.com/stdlib-js/math-base-special-cceil
 
 <!-- </related-links> -->
 

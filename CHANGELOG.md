@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-04)
+## Unreleased (2026-05-10)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`2c71e4a`](https://github.com/stdlib-js/stdlib/commit/2c71e4ab39d867c8f01435226150b86c85c26459) - use correct `Complex64` import in `math/base/special/cceilf` [(#12039)](https://github.com/stdlib-js/stdlib/pull/12039)
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`2c71e4a`](https://github.com/stdlib-js/stdlib/commit/2c71e4ab39d867c8f01435226150b86c85c26459) - **fix:** use correct `Complex64` import in `math/base/special/cceilf` [(#12039)](https://github.com/stdlib-js/stdlib/pull/12039) _(by Karan Anand)_
 -   [`e83179b`](https://github.com/stdlib-js/stdlib/commit/e83179b9b342021ac4b62eb9985e82137462ff0e) - **docs:** improve doctests for complex number instances in `math/base/special/cceilf` [(#10183)](https://github.com/stdlib-js/stdlib/pull/10183) _(by Vishal Gaikwad)_
 
 </details>
@@ -24,8 +35,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Karan Anand
 -   Vishal Gaikwad
 
 </section>
